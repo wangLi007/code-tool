@@ -1,0 +1,14 @@
+{
+  "快捷输入promise": {
+    "scope": "javascript,typescript,css,vue,less,scss",
+    "prefix": "promise",
+    "body": [
+      "return new Promise((reslove, reject) => {",
+      "\tthis.nodeObj.then((res) => {",
+      "\treslove(res.toString());",
+      "\t})",
+      "\t.catch((err) => reject(err));",
+      "});"
+    ]
+  }
+}

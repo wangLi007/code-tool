@@ -41,22 +41,22 @@ $base_height: 640;
  * 参数顺序：上右下左
  * eg：@include absPos(50%, '', '' , 50%);
  */
-@mixin absPos($top: "", $right: "", $bottom: "", $left: "") {
+@mixin absPos($top: '', $right: '', $bottom: '', $left: '') {
   position: absolute;
 
-  @if ($left != "") {
+  @if ($left != '') {
     left: $left;
   }
 
-  @if ($right != "") {
+  @if ($right != '') {
     right: $right;
   }
 
-  @if ($top != "") {
+  @if ($top != '') {
     top: $top;
   }
 
-  @if ($bottom != "") {
+  @if ($bottom != '') {
     bottom: $bottom;
   }
 }
@@ -104,7 +104,7 @@ $base_height: 640;
  * eg：@include targetLine(3);
  */
 @mixin targetLine($w: 100%) {
-  content: "";
+  content: '';
   display: block;
   width: $w;
   height: 3px;
@@ -117,14 +117,14 @@ $base_height: 640;
  */
 @mixin clearfix {
   &::after {
-    content: "";
+    content: '';
     display: block;
     clear: both;
   }
 }
 
 /**
- * 取消滚动条央视
+ * 取消滚动条样式
  * eg：@include cancelScroll;
  */
 @mixin cancelScroll {
