@@ -1,0 +1,137 @@
+// 根据设计稿宽度360，设计的vw适应
+$base_width: 360;
+$base_height: 640;
+
+@function vw($px) {
+  @return ($px / $base_width) * 100vw;
+}
+
+@function vh($px) {
+  @return ($px / $base_height) * 100vh;
+}
+
+/**
+ * 弹性盒子
+ * 参数：主轴排列、交叉轴排列
+ * eg：@include (center, flex-start);
+ */
+@mixin flexPos($posX: center, $posY: center) {
+  display: flex;
+  justify-content: $posX;
+  align-items: $posY;
+}
+
+// flex-basis：项目的初始宽度。
+// flex-grow：指定如果有多余宽度，项目是否可以扩大。
+// flex-shrink：指定如果宽度不足，项目是否可以缩小。
+
+/**
+ * 绝对定位居中
+ * eg：@include absCenter;
+ */
+@mixin absCenter {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/**
+ * 绝对定位
+ * 参数顺序：上右下左
+ * eg：@include absPos(50%, '', '' , 50%);
+ */
+@mixin absPos($top: "", $right: "", $bottom: "", $left: "") {
+  position: absolute;
+
+  @if ($left != "") {
+    left: $left;
+  }
+
+  @if ($right != "") {
+    right: $right;
+  }
+
+  @if ($top != "") {
+    top: $top;
+  }
+
+  @if ($bottom != "") {
+    bottom: $bottom;
+  }
+}
+
+/**
+ * 多行溢出打点
+ * 参数：行数，n行，默认2行
+ * eg：@include overDots(3);
+ */
+@mixin overDots($n: 2) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $n; //行数
+  -webkit-box-orient: vertical;
+}
+
+/**
+ * 单行打点
+ * eg：@include SingleDots();
+ */
+@mixin SingleDots {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/**
+ * mask弹层
+ * eg：@include mask();
+ */
+@mixin mask {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/**
+ * 选中目标行的下划线
+ * 参数：下划线宽度
+ * eg：@include targetLine(3);
+ */
+@mixin targetLine($w: 100%) {
+  content: "";
+  display: block;
+  width: $w;
+  height: 3px;
+  background-color: #ffd101;
+}
+
+/**
+ * 清除浮动
+ * eg：@include clearfix;
+ */
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+/**
+ * 取消滚动条央视
+ * eg：@include cancelScroll;
+ */
+@mixin cancelScroll {
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none; /* Chrome Safari */
+  }
+}
