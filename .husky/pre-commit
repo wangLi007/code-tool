@@ -3,4 +3,5 @@
 
 # npx --no-install lint-staged
 # 提交之前先进行格式化
-npm run format
+# npm run format
+npx --no-install lint-staged
