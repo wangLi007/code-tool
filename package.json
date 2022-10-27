@@ -1,0 +1,28 @@
+{
+  "name": "code",
+  "version": "1.0.0",
+  "description": "desc",
+  "main": "null",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "line": "prettier --write ./src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wangLi007/code-tool.git"
+  },
+  "lint-staged": {
+    "src/*": "prettier --write --ignore-unknown"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wangLi007/code-tool/issues"
+  },
+  "homepage": "https://github.com/wangLi007/code-tool#readme",
+  "devDependencies": {
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "2.7.1"
+  }
+}
