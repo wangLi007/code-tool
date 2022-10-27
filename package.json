@@ -14,7 +14,7 @@
     "url": "git+https://github.com/wangLi007/code-tool.git"
   },
   "lint-staged": {
-    "src/**/*.{jsx,tsx,ts,js,json,css,md}": [
+    "src/*.{jsx,tsx,ts,js,json,css,md}": [
       "prettier --write",
       "eslint --fix",
       "git add"
