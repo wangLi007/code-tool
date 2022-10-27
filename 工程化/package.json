@@ -7,7 +7,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --write ./src --ignore-unknown",
     "eslint": "eslint --fix src/**",
-    "prepare": "husky install",
     "husky": "node ./node_modules/husky/lib/bin.js"
   },
   "repository": {
