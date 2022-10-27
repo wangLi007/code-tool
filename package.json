@@ -5,14 +5,16 @@
   "main": "null",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "line": "prettier --write ./src"
+    "format": "prettier --write ./src",
+    "prepare": "husky install",
+    "husky":"node ./node_modules/husky/lib/bin.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/wangLi007/code-tool.git"
   },
   "lint-staged": {
-    "src/*": "prettier --write --ignore-unknown"
+    "**/*": "prettier --write ./src"
   },
   "author": "",
   "license": "ISC",
