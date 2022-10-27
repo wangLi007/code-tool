@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --write ./src --ignore-unknown",
+    "eslint": "eslint --fix src/**",
     "prepare": "husky install",
     "husky": "node ./node_modules/husky/lib/bin.js"
   },
@@ -13,10 +14,10 @@
     "type": "git",
     "url": "git+https://github.com/wangLi007/code-tool.git"
   },
+  "desc":"npm run eslint",
   "lint-staged": {
-    "/src/*.{jsx,tsx,ts,js,json,css,md}": [
-      "prettier --write",
-      "eslint --fix",
+    "src/*.js": [
+      "npm run format",
       "git add"
     ]
   },
