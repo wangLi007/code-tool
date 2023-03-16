@@ -1,0 +1,87 @@
+// vscode  => 设置  用户右边一个工作区 => 右上角打开json配置 => 然后就可以用这个JSON文件了
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"workbench.colorTheme": "Vitesse Light",
+		"workbench.preferredDarkColorTheme": "Vitesse Dark",
+		"workbench.preferredLightColorTheme": "Vitesse Light",
+		"workbench.productIconTheme": "icons-carbon",
+		"workbench.iconTheme": "file-icons",
+		"explorer.confirmDelete": false,
+		"explorer.confirmDragAndDrop": false,
+		"window.autoDetectColorScheme": true,
+		"workbench.editor.closeOnFileDelete": true,
+		"workbench.editor.highlightModifiedTabs": true,
+		"workbench.editor.tabCloseButton": "left",
+		"workbench.editor.limit.enabled": true,
+		"workbench.editor.limit.perEditorGroup": true,
+		"workbench.editor.limit.value": 5,
+		"workbench.list.smoothScrolling": true,
+		"workbench.sideBar.location": "right",
+		"workbench.tree.expandMode": "singleClick",
+		"workbench.tree.indent": 10,
+		"extensions.ignoreRecommendations": true,
+		"files.simpleDialog.enable": true,
+		"git.confirmSync": false,
+		"terminal.integrated.cursorBlinking": true,
+		"terminal.integrated.cursorStyle": "line",
+		"terminal.integrated.fontWeight": "300",
+		"terminal.integrated.persistentSessionReviveProcess": "never",
+		"terminal.integrated.tabs.enabled": true,
+		"debug.onTaskErrors": "debugAnyway",
+		"emmet.showSuggestionsAsSnippets": true,
+		"gitlens.codeLens.authors.enabled": false,
+		"gitlens.codeLens.enabled": false,
+		"gitlens.codeLens.recentChange.enabled": false,
+		"gitlens.menus": {
+			"editor": {
+				"blame": false,
+				"clipboard": true,
+				"compare": true,
+				"history": false,
+				"remote": false
+			},
+			"editorGroup": {
+				"blame": true,
+				"compare": false
+			},
+			"editorTab": {
+				"clipboard": true,
+				"compare": true,
+				"history": true,
+				"remote": true
+			},
+			"explorer": {
+				"clipboard": true,
+				"compare": true,
+				"history": true,
+				"remote": true
+			},
+			"scm": {
+				"authors": true
+			},
+			"scmGroup": {
+				"compare": true,
+				"openClose": true,
+				"stash": true
+			},
+			"scmGroupInline": {
+				"stash": true
+			},
+			"scmItem": {
+				"clipboard": true,
+				"compare": true,
+				"history": true,
+				"remote": false,
+				"stash": true
+			}
+		},
+		"volar.autoCompleteRefs": false,
+		"volar.completion.preferredTagNameCase": "pascal",
+		"explorer.fileNesting.expand": false
+	}
+}
