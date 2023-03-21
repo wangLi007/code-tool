@@ -82,6 +82,7 @@
 		},
 		"volar.autoCompleteRefs": false,
 		"volar.completion.preferredTagNameCase": "pascal",
-		"explorer.fileNesting.expand": false
+		"explorer.fileNesting.expand": false,
+	        "workbench.editor.enablePreview": false
 	}
 }
